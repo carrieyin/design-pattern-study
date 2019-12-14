@@ -4,21 +4,30 @@
 #include "head/Decorator/DecoratorPhoneA.h"
 #include "head/Decorator/DecoratorPhoneB.h"
 #include "src/Prototype/ResumeA.h"
+#include "head/Template/CompanyRecruit.h"
+#include "head/Template/Alibaba.h"
+#include "head/Template/Tencent.h"
 
 int main() {
-    //×°ÊÎÄ£Ê½²âÊÔ
+    //×°ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½
     Phone* iphone = new NokiaPhone("nokia 6000");
     Phone* dpa = new DecoratorPhoneA(iphone);
     Phone* dpb = new DecoratorPhoneB(dpa);
     dpb->showDecorate();
 
-    //Ô­ÐÍÄ£Ê½²âÊÔ
+    //Ô­ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½
     Resume * ra = new ResumeA();
     ra->setAge(25);
-    ra->setName("Ð¡Íë");
+    ra->setName("lisan");
 
     ResumeA *pA = (ResumeA *) ra->clone();
     delete ra;
     cout<<*pA<<endl;
+
+    //Ä£ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½
+    CompanyRecruit* p = new Alibaba();
+    p->recruitProcess();
+    p = new Tencent();
+    p->recruitProcess();
     return 0;
 }
