@@ -7,6 +7,8 @@
 #include "head/Template/CompanyRecruit.h"
 #include "head/Template/Alibaba.h"
 #include "head/Template/Tencent.h"
+#include "head/Builder/Director.h"
+#include "head/Builder/NokiaBuilder.h"
 
 int main() {
     //װ��ģʽ����
@@ -29,5 +31,11 @@ int main() {
     p->recruitProcess();
     p = new Tencent();
     p->recruitProcess();
+
+    //builder test
+    Director director;
+    NokiaBuilder* nokiaBuiler = new NokiaBuilder();
+    director.creat(nokiaBuiler);
+    nokiaBuiler->display();
     return 0;
 }

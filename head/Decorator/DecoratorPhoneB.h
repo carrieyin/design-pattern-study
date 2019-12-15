@@ -6,7 +6,6 @@
 #define DESIGN_PATTERN_STUDY_DECORATORPHONEB_H
 
 
-#include "Phone.h"
 #include "DecoratorPhone.h"
 #include <iostream>
 using  namespace std;

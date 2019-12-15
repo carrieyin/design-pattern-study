@@ -6,8 +6,8 @@
 #define DESIGN_PATTERN_STUDY_NOKIAPHONE_H
 
 #include <iostream>
-
 #include "Phone.h"
+
 using  namespace std;
 class NokiaPhone : public Phone{
 public:
@@ -18,7 +18,7 @@ public:
 
     };
     void showDecorate(){
-        cout<<m_name<<"╣дв╟йн"<<endl;
+        cout<<m_name<<"О©╫О©╫в╟О©╫О©╫"<<endl;
     };
 private:
     string m_name;
